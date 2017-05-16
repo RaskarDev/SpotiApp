@@ -11,12 +11,11 @@
 
   <div class="col-md-9">
     <div class="row">
-      <div class="col-md-3" *ngFor="let artista of spotifyService.artistas">
+      <div class="col-md-3 puntero" *ngFor="let artista of spotifyService.artistas" [routerLink]="['/artista', artista.id]">
         <img [src]="artista.images | sinfoto" class="img-fluid img-thumbnail">
-        <p class="text-center">{{artista.name}}</p>
         <hr>
+        <p class="text-center">{{artista.name}}</p>
       </div>
     </div>
   </div>
-
 </div>
